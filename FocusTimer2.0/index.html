@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <title>Focus Timer</title>
+
+    <link rel="shortcut icon" href="./OBJECTS/favicon.svg" type="image/x-svg">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./JS/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <button id="toggle-mode">
+            <span class="sr-only">Dark mode Ativado</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+        <div id="main">
+            <section id="timer">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" >
+                <button 
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button
+                data-action="toggleRunning"
+                class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+                <button
+                data-action="set"
+                class="ph ph-timer secondary">
+                    <span class="sr-only">Ajustar contador</span>
+                </button>
+                <button
+                data-action="reset"
+                class="ph ph-stop-circle secondary">
+                    <span class="sr-only">Reiniciar contador</span>
+                </button>
+            </section>
+        </div>
+         
+
+        <div id="iconSounds">
+            <div>
+                <div id="divMusic" class="musicbox"><button id="music"><img src="https://api.iconify.design/eva/music-fill.svg?color=" alt="música"></button></div>
+                <div id="divFlorest" class="musicbox"><button id="florest"><img src="https://api.iconify.design/charm/tree-fir.svg?color=" alt="som de floresta"></button></div>
+            </div>
+
+            <div>
+                <div id="divRain" class="musicbox"><button id="rain"><img src="https://api.iconify.design/wpf/rain.svg?color=" alt="som de chuva"></button></div>
+                <div id="divFire" class="musicbox"><button id="fire"><img src="https://api.iconify.design/bi/fire.svg?color=" alt="som de fogueira"></button></div>
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>

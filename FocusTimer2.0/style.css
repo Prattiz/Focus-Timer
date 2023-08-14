@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --hue: 1000;
+    --bg-color: hsl(var(--hue), 5%, 7%);
+    --text-color: hsl(var(--hue), 40%, 98%);
+    --primary-color: hsl(var(--hue), 100%, 63%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+    --bg-content2:rgb(96, 95, 95);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    }
+    
+#main {
+    display: grid;
+    justify-items: center;
+}
+
+#app{
+    display: flex;
+    flex-direction: row;
+    gap:19.5rem
+}
+    
+#timer{
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: flex;
+        
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+    color: var(--text-color);
+    transition: 2s ease-in-out;
+}
+
+#toggle-mode:hover{
+    transform: rotate(360deg);
+}
+
+#controls {
+    margin-top: 1.6rem;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 999rem;
+    display: flex;
+}
+
+#iconSounds{
+    display: flex;
+    flex-direction: row;
+    gap: 3.2rem;
+}
+
+.light {
+    --text-color: hsl(var(--hue), 5%, 7%);
+    --bg-color: hsl(var(--hue), 40%, 98%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
+    --bg-content2:#E1E1E6;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+.secondary {
+    color: var(--button-secondary);
+}
+
+.musicbox{
+    width: 13.8rem;
+    height:15.2rem;
+    margin-top: 3.2rem;
+    background-color: var(--bg-content2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.4rem;
+    
+    
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon,
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high {
+    display: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 6.4rem;
+}
+
+img{
+    width: 6rem;
+    margin-top: 2rem;
+    height:6rem; 
+}
+
+.musicbox button{
+    padding:3rem 3rem
+
+}
+
+.on{
+    background-color: aquamarine;
+}
+
+
+
+
