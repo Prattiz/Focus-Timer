@@ -8,6 +8,8 @@ export function sleep(ms) {
 }
 
 export async function countdown() {
+
+    clearTimeout(state.countdownId)
     if(!state.isRunning) {
         return
     }
@@ -32,7 +34,7 @@ export async function countdown() {
     updateDisplay(minutes, seconds)
 
 
-    setTimeout(() => countdown(), 1000)
+    state.countdownId = setTimeout(() => countdown(), 1000)
 
 }
 
